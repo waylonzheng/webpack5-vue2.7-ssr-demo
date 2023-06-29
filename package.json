@@ -1,0 +1,35 @@
+{
+  "name": "webpack5-vue2.7-ssr-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=dev webpack serve --progress --config build/webpack.dev.js",
+    "build": "cross-env NODE_ENV=prod node build/webpack.config.js",
+    "build:ssr": "cross-env NODE_ENV=server node build/webpack.config.js --hide-modules",
+    "start": "node src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "vue": "2.7.14",
+    "vue-router": "^3.6.5",
+    "vue-server-renderer": "^2.7.14",
+    "webpack-merge": "^5.9.0",
+    "webpack-node-externals": "^3.0.0"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "html-webpack-plugin": "^5.5.3",
+    "swc-loader": "^0.2.3",
+    "vue-demi": "0.13.1",
+    "vue-loader": "15.10.1",
+    "vue-style-loader": "^4.1.3",
+    "webpack": "^5.88.1",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  }
+}
