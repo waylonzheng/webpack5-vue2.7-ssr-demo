@@ -1,10 +1,17 @@
 <template>
+  <div>
     <div>home</div>
+    <button @click="goToAbout">go to about</button>
+  </div>
 </template>
 
-<script setup lang='ts'>
-import {  } from 'vue'
+<script setup>
+import { useRouter } from "vue-router/composables";
+const router = useRouter();
+const goToAbout = () => {
+  console.warn("router", router);
+  router.push({ path: "/about" });
+};
 </script>
 
-<style lang='scss' scoped>
-</style>
+<style scoped></style>

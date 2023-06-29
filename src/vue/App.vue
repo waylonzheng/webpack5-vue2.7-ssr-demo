@@ -1,12 +1,13 @@
 <template>
+  <main>
     <div>{{ title }}</div>
-    <router-view></router-view>
+    <router-view />
+  </main>
 </template>
 
-<script setup lang='ts'>
-import { ref } from 'vue'
-const title = ref('Hello World!')
+<script setup lang="ts">
+import { ref } from "vue";
+const title = ref("Hello World!");
 </script>
 
-<style lang='scss' scoped>
-</style>
+<style lang="scss" scoped></style>

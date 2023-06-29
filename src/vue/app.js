@@ -2,9 +2,9 @@ import Vue from 'vue'
 import App from './App.vue'
 import { createRouter } from './router'
 
-export function createApp() {
+export function createApp(context) {
     // 创建 router 实例
-    const router = createRouter()
+    const router = createRouter(context)
 
     const app = new Vue({
         // 注入 router 到根 Vue 实例

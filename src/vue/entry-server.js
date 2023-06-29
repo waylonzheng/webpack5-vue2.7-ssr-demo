@@ -5,10 +5,10 @@ export default context => {
     // 以便服务器能够等待所有的内容在渲染前，
     // 就已经准备就绪。
     return new Promise((resolve, reject) => {
-        const { app, router } = createApp()
+        const { app, router } = createApp(context)
 
         // 设置服务器端 router 的位置
-        router.push(context.url)
+        router.push(context.originalUrl)
 
         // 等到 router 将可能的异步组件和钩子函数解析完
         router.onReady(() => {

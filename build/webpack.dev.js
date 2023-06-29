@@ -16,7 +16,7 @@ module.exports = merge(baseConfig, {
         new HtmlWebpackPlugin({
             title: "webpack5-vue2-ssr-demo",
             filename: "index.html",
-            template: resolve("public/index.html"),
+            template: resolve("public/template.html"),
         }),
     ],
     devServer: {
