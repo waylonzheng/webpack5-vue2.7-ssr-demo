@@ -19,7 +19,7 @@ module.exports = () => merge(baseConfig, {
 
     // 此处告知 server bundle 使用 Node 风格导出模块(Node-style exports)
     output: {
-        path: resolve('../ssr'),
+        path: resolve('../dist/server'),
         filename: 'server-bundle.js',
         libraryTarget: 'commonjs2'
     },

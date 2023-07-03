@@ -8,8 +8,8 @@
 </head>
 
 <body>
-    <div id="app"></div>
-    <%- main %>
+    <%- typeof main !== 'undefined' && main || '<div id="app"/>' %>
+    <%- context.renderScripts() %>
 </body>
 
 </html>

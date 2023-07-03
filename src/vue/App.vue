@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <main id="app">
     <div>{{ title }}</div>
     <router-view />
   </main>

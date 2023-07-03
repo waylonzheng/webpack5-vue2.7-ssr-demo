@@ -4,7 +4,7 @@ const ejs = require('ejs')
 const app = express()
 const port = 3000
 
-app.use(express.static(resolve('../public')))
+app.use(express.static(resolve('../dist')))
 // 注册模版引擎
 app.engine('.ejs', ejs.__express)
 app.set('views', resolve('../public')); //设置视图的对应目录
