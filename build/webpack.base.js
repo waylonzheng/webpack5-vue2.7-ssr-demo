@@ -1,4 +1,3 @@
-const webpack = require('webpack');
 const { VueLoaderPlugin } = require('vue-loader')
 const { resolve } = require('./util');
 module.exports = {
@@ -21,7 +20,10 @@ module.exports = {
                 use: ["vue-style-loader", "css-loader"],
                 sideEffects: true, // 有副作用 支持import css 配合Tree Shaking
             },
-
+            {
+                test: /\.less$/,
+                use: ["vue-style-loader", "css-loader", "less-loader"]
+            },
             {
                 test: /\.(svg|gif|png|jpe?g)$/,
                 type: "asset/inline",
